@@ -1,8 +1,15 @@
 import java.util.ArrayList;
 public class Sorts {
 
+  public int swapsBubble = 0;
+  public int passesBubble = 0;
+  public int swapsSelection = 0;
+  public int passesSelection = 0;
+  public int swapsInsertion = 0;
+  public int passesInsertion = 0;
+
   public void bubble(ArrayList<Comparable> data) {
-    boolean cont = false;
+    boolean cont = true;
     for(int i=data.size()-1; i>0; i--){
       if((data.get(i).compareTo(data.get(i-1))) < 0){
         cont = true;
@@ -11,7 +18,7 @@ public class Sorts {
         data.set(i-1, x);
       }
     }
-    if (cont == true) bubble(data);
+    if (cont) bubble(data);
   }
 
   public void insertion(ArrayList<Comparable> data) {
