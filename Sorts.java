@@ -1,6 +1,7 @@
-public static Sorts {
+import java.util.ArrayList;
+public class Sorts {
 
-  public void bubble {
+  public void bubble(ArrayList<Comparable> data) {
     boolean cont = false;
     for(int i=data.size()-1; i>0; i--){
       if((data.get(i).compareTo(data.get(i-1))) < 0){
@@ -10,10 +11,10 @@ public static Sorts {
         data.set(i-1, x);
       }
     }
-    if (cont == true) bubbleSortV(data);
+    if (cont == true) bubble(data);
   }
 
-  public void insertion {
+  public void insertion(ArrayList<Comparable> data) {
     for(int partition = 1; partition < data.size(); partition++) {
       //partition marks first item in unsorted region
 
@@ -32,9 +33,11 @@ public static Sorts {
         }
         else
           break;
-  }
+        }
+      }
+    }
 
-  public void selection {
+  public void selection(ArrayList<Comparable> data) {
     int maxPos = 0;
 
     for(int pass = 0; pass < data.size(); pass++) {
@@ -52,5 +55,6 @@ public static Sorts {
       data.set(maxPos, x);
 
 
+    }
   }
 }
