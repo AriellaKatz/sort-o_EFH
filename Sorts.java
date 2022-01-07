@@ -1,4 +1,19 @@
+/*
+Erica's Fans and Hugo (EFH) -- Hugo Jenkins, Ariella Katz, Kaitlin Ho, Boary, Tom, Apple
+APCS
+Lab04 -- 
+01-06-2021
+*/
+
+/*
+DISCO:
+
+QCC:
+
+*/
+
 import java.util.ArrayList;
+
 public class Sorts {
 
   public int swapsBubble = 0;
