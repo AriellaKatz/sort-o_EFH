@@ -1,5 +1,5 @@
 # sort-o_EFH
-Erica's Fans and Hugo (EFH): Hugo Jenkins, Ariella Katz, Kaitlin Ho, Boary, Tom, Apple
+Erica's Fans and Hugo (EFH): Hugo Jenkins, Ariella Katz, Kaitlin Ho, Boary, Tom, Apple  
 Song of the Week: Somebody That I Used To Know by Gotye
 ## BubbleSort
 * Best case: Already sorted
