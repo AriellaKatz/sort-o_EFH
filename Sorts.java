@@ -35,7 +35,7 @@ public class Sorts {
           boolean sorted = true;
           for(int index = data.size()-1; index > passes; index--) {
             comparesBubble++;
-            if(data.get(index).compareTo(data.get(index-1)) < 0) {
+            if(data.get(index).compareTo(data.get(index-1)) <= 0) {
               swapsBubble++;
               Comparable temp = data.get(index);
               data.set(index, data.get(index-1));
