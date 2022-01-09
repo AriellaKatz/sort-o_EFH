@@ -30,7 +30,7 @@ public class Sorts {
     int swapsBubble = 0;
     int passesBubble = 0;
     int comparesBubble = 0;
-    for(int passes = 0; passes < data.size()-1; passes++) {
+    for(int passes = 0; passes < data.size(); passes++) {
       passesBubble++;
           boolean sorted = true;
           for(int index = data.size()-1; index > passes; index--) {
