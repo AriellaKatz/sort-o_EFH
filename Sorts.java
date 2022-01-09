@@ -8,7 +8,7 @@ Lab04 -- Never Fear, Big O is Here!
 import java.util.ArrayList;
 
 public class Sorts {
-
+/*
   public int swapsBubble = 0;
   public int passesBubble = 0;
   public int swapsSelection = 0;
@@ -24,27 +24,36 @@ public class Sorts {
     swapsInsertion = 0;
     passesInsertion = 0;
   }
-
-  public void bubble(ArrayList<Comparable> data) {
-    boolean cont = false;
-    for(int i=data.size()-1; i>0; i--){
-      if((data.get(i).compareTo(data.get(i-1))) < 0){
-        cont = true;
-        Comparable x= data.get(i);
-        data.set(i, data.get(i-1));
-        data.set(i-1, x);
-	swapsBubble++;
+*/
+  public static int[] bubble(ArrayList<Comparable> data) {
+    int swapsBubble = 0;
+    int passesBubble = 0;
+    for(int passes = 0; passes < data.size()-2; passes++) {
+      passesBubble++;
+          boolean sorted = true;
+          for(int index = data.size()-1; index > passes; index--) {
+            if(data.get(index).compareTo(data.get(index-1)) < 0) {
+              swapsBubble++;
+              Comparable temp = data.get(index);
+              data.set(index, data.get(index-1));
+              data.set(index-1, temp);
+              sorted = false; // basically determines whether or not a swap happens
+            }
+          }
+          if(sorted) {
+            break;
+          }
+        }
+        int[] ret = new int[2];
+        ret[0] = swapsBubble;
+        ret[1] = passesBubble;
+        return ret;
       }
-    }
-    passesBubble++;
-    if (cont) bubble(data);
-    else {
-      System.out.println("passes: " + passesBubble +
-      "\tswaps: " + swapsBubble);
-    }
-  }
 
-  public void insertion(ArrayList<Comparable> data) {
+
+  public static int[] insertion(ArrayList<Comparable> data) {
+    int swapsInsertion = 0;
+    int passesInsertion = 0;
     for(int partition = 1; partition < data.size(); partition++) {
       //partition marks first item in unsorted region
       //a pass in insertion is considered one walk through a
@@ -66,11 +75,16 @@ public class Sorts {
           break;
         }
       }
-      System.out.println("passes: " + passesInsertion +
-      "\tswaps: " + swapsInsertion);
+
+      int[] ret = new int[2];
+      ret[0] = swapsInsertion;
+      ret[1] = passesInsertion;
+      return ret;
     }
 
-  public void selection(ArrayList<Comparable> data) {
+  public static int[] selection(ArrayList<Comparable> data) {
+    int swapsSelection = 0;
+    int passesSelection = 0;
     int maxPos = 0;
 
     for(int pass = 0; pass < data.size(); pass++) {
@@ -90,6 +104,10 @@ public class Sorts {
     }
     System.out.println("passes: " + passesSelection +
     "\tswaps: " + swapsSelection);
-  }
+  int[] ret = new int[2];
+  ret[0] = swapsSelection;
+  ret[1] = passesSelection;
+  return ret;
+}
 
 }
