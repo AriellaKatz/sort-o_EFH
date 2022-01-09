@@ -19,7 +19,7 @@ a2: no more than length-1
 
 SEL-QA:
 q0: How many passes to sort n elements?
-a0: n-1
+a0: n
 q1: What do you know after pass p?
 a1: The elements at indeces (n-1)-p to n-1 are sorted (if the number of passes begins at 0).
 q2: How do you know if sorted?
