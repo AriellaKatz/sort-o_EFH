@@ -4,10 +4,10 @@ Lab04 -- Never Fear, Big O is Here!
 2021-01-07
 
 DISCO:
-
+- If BubbleSort is coded so it finishes sorting after a full pass without swaps, the  least amount of passes needed is one and the max is n-1. If BubbleSorted is coded without this function, the least and greatest amount of passes needed would be equal (n-1).
 
 QCC:
-
+- Is there a concrete definition for run-time complexity in this situation? 
 
 BUB-QA:
 q0: If a pass requires no swaps, what do you know?
