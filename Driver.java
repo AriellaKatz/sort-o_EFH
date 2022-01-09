@@ -33,25 +33,96 @@ public class Driver{
 	}
 	return "{" + out.substring(1) + "}";
 }
+/*
+	public static void best_worstProof() {
+		ArrayList bubbleBest = new ArrayList(5);
+		ArrayList bubbleWorst = new ArrayList(5);
+		ArrayList insertionBest = new ArrayList(5);
+		ArrayList insertionWorst = new ArrayList(5);
+		ArrayList selectionBest = new ArrayList(5);
+		ArrayList selectionWorst = new ArrayList(5);
+		ArrayList hugo = new ArrayList(5);
+		hugo.add(1);
+		hugo.add(3);
+
+		hugo.add
+
+	}
+	*/
 
 	public static void bubbleProof() {
+		System.out.println("Start of bubbleProof");
+		int[] lengths = {5, 10, 15};
 		// Best case
-		ArrayList hugo = populate(10,0,1000);
-		Sorts.bubble(hugo);
-		System.out.print("Sorting an ArrayList in ascending order: ");
-		System.out.println(arrayToString(Sorts.bubble(hugo)));
+		for (int length = 0; length < lengths.length; length ++) {
+			ArrayList hugo = populate(lengths[length],0,1000);
+			Sorts.bubble(hugo);
+			System.out.print("Sorting an ArrayList of size " + lengths[length] + " in ascending order: ");
+			System.out.println(arrayToString(Sorts.bubble(hugo)));
 
 		// Worst case
+
 		for (int i = 0; i < hugo.size(); i++) {
 			hugo.set(i, (int)hugo.get(i)*-1);
 		}
 		//System.out.println(arrayToString(hugo));
-		System.out.print("Sorting an ArrayList in descending order: ");
+		System.out.print("Sorting an ArrayList of size " + lengths[length] + " in descending order: ");
 		System.out.println(arrayToString(Sorts.bubble(hugo)));
+	}
+	System.out.println("End of bubbleProof");
 
 	}
+
+	public static void insertionProof() {
+		System.out.println("Start of insertionProof");
+		int[] lengths = {5, 10, 15};
+		// Best case
+		for (int length = 0; length < lengths.length; length ++) {
+			ArrayList hugo = populate(lengths[length],0,1000);
+			Sorts.insertion(hugo);
+			System.out.print("Sorting an ArrayList of size " + lengths[length] + " in ascending order: ");
+			System.out.println(arrayToString(Sorts.insertion(hugo)));
+
+		// Worst case
+
+		for (int i = 0; i < hugo.size(); i++) {
+			hugo.set(i, (int)hugo.get(i)*-1);
+		}
+		//System.out.println(arrayToString(hugo));
+		System.out.print("Sorting an ArrayList of size " + lengths[length] + " in descending order: ");
+		System.out.println(arrayToString(Sorts.insertion(hugo)));
+	}
+	System.out.println("End of insertionProof");
+
+	}
+
+	public static void selectionProof() {
+		System.out.println("Start of selectionProof");
+		int[] lengths = {5, 10, 15};
+		// Best case
+		for (int length = 0; length < lengths.length; length ++) {
+			ArrayList hugo = populate(lengths[length],0,1000);
+			Sorts.selection(hugo);
+			System.out.print("Sorting an ArrayList of size " + lengths[length] + " in ascending order: ");
+			System.out.println(arrayToString(Sorts.selection(hugo)));
+
+		// Worst case
+
+		for (int i = 0; i < hugo.size(); i++) {
+			hugo.set(i, (int)hugo.get(i)*-1);
+		}
+		//System.out.println(arrayToString(hugo));
+		System.out.print("Sorting an ArrayList of size " + lengths[length] + " in descending order: ");
+		System.out.println(arrayToString(Sorts.selection(hugo)));
+	}
+	System.out.println("End of selectionProof");
+
+	}
+
 	public static void main(String[] args) {
 		bubbleProof();
+		insertionProof();
+		selectionProof();
 	}
 
 }

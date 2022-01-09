@@ -25,13 +25,16 @@ public class Sorts {
     passesInsertion = 0;
   }
 */
+
   public static int[] bubble(ArrayList<Comparable> data) {
     int swapsBubble = 0;
     int passesBubble = 0;
-    for(int passes = 0; passes < data.size()-2; passes++) {
+    int comparesBubble = 0;
+    for(int passes = 0; passes < data.size()-1; passes++) {
       passesBubble++;
           boolean sorted = true;
           for(int index = data.size()-1; index > passes; index--) {
+            comparesBubble++;
             if(data.get(index).compareTo(data.get(index-1)) < 0) {
               swapsBubble++;
               Comparable temp = data.get(index);
@@ -44,9 +47,10 @@ public class Sorts {
             break;
           }
         }
-        int[] ret = new int[2];
+        int[] ret = new int[3];
         ret[0] = swapsBubble;
         ret[1] = passesBubble;
+        ret[2] = comparesBubble;
         return ret;
       }
 
@@ -54,6 +58,8 @@ public class Sorts {
   public static int[] insertion(ArrayList<Comparable> data) {
     int swapsInsertion = 0;
     int passesInsertion = 0;
+    int comparesInsertion = 0;
+
     for(int partition = 1; partition < data.size(); partition++) {
       //partition marks first item in unsorted region
       //a pass in insertion is considered one walk through a
@@ -64,6 +70,7 @@ public class Sorts {
       for(int i = partition; i > 0; i--) {
         // "walk" the current item to where it belongs
         // by swapping adjacent items
+        comparesInsertion++;
         if ((data.get(i).compareTo(data.get(i-1)))<0) {
           Comparable x = data.get(i-1);
           data.set(i-1, data.get(i));
@@ -76,21 +83,25 @@ public class Sorts {
         }
       }
 
-      int[] ret = new int[2];
+      int[] ret = new int[3];
       ret[0] = swapsInsertion;
       ret[1] = passesInsertion;
+      ret[2] = comparesInsertion;
       return ret;
     }
+
 
   public static int[] selection(ArrayList<Comparable> data) {
     int swapsSelection = 0;
     int passesSelection = 0;
+    int comparesSelection = 0;
     int maxPos = 0;
 
     for(int pass = 0; pass < data.size(); pass++) {
         maxPos=0;
       passesSelection++;
       for(int i = 0; i < data.size()-pass; i++ ) {
+        comparesSelection++;
         if (data.get(i).compareTo(data.get(maxPos))>0) {
           maxPos = i;
         }
@@ -102,12 +113,11 @@ public class Sorts {
     //even if the swap is with itself, it requires the same
     // amount of time and memory so it must still be counted
     }
-    System.out.println("passes: " + passesSelection +
-    "\tswaps: " + swapsSelection);
-  int[] ret = new int[2];
-  ret[0] = swapsSelection;
-  ret[1] = passesSelection;
-  return ret;
-}
+    int[] ret = new int[3];
+    ret[0] = swapsSelection;
+    ret[1] = passesSelection;
+    ret[2] = comparesSelection;
+    return ret;
+  }
 
 }
