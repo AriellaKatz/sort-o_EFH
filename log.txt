@@ -1,3 +1,4 @@
 1/6 - Refactored our sort codes and added them to Sorts.java
 1/7 - Looked at functions and graphed them by hand; made sort-o_EFH repo
 1/8 - The question: What does time complexity really refer to? Compares? Swaps? Passes? Each operation takes different amounts of time, so they can't really be added. Worked on the driver; started with BubbleSort
+1/9 - Continued to work on the runtime complexities and finished up the driver. Updated notes.txt
