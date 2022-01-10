@@ -47,10 +47,11 @@ public class Sorts {
             break;
           }
         }
-        int[] ret = new int[3];
+        int[] ret = new int[4];
         ret[0] = swapsBubble;
         ret[1] = passesBubble;
         ret[2] = comparesBubble;
+        ret[3] = swapsBubble + passesBubble;
         return ret;
       }
 
@@ -83,10 +84,11 @@ public class Sorts {
         }
       }
 
-      int[] ret = new int[3];
+      int[] ret = new int[4];
       ret[0] = swapsInsertion;
       ret[1] = passesInsertion;
       ret[2] = comparesInsertion;
+      ret[3] = swapsInsertion + passesInsertion;
       return ret;
     }
 
@@ -113,10 +115,11 @@ public class Sorts {
     //even if the swap is with itself, it requires the same
     // amount of time and memory so it must still be counted
     }
-    int[] ret = new int[3];
+    int[] ret = new int[4];
     ret[0] = swapsSelection;
     ret[1] = passesSelection;
     ret[2] = comparesSelection;
+    ret[3] = swapsSelection + passesSelection;
     return ret;
   }
 
