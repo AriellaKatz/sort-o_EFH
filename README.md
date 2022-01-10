@@ -60,7 +60,7 @@ Song of the Week: Somebody That I Used To Know by Gotye
   * Regardless of the initial arrangement of elements, the same number of passes will be made, since the partition must be set the same amount of times, each time adding an element to the sorted region, and it is the moving of a partition (and the following "walk") that constitutes a pass. However, if it is already in ascending order, no swaps will be made during the pass, and a minimal amount of time and memory will be used. If it is entirely in descending order, the minimum element must be swapped with all of the other elements in order to walk it to its place; this is the maximum number of swaps per pass, and requires the maximum amount of time and memory.
   * We tested this using array sizes of 20, 100, 1000, 10000. Our results showed that to sort arrays of these sizes, the sum of passes, swaps, and compares were as follows:  
   *{399, 9999, 999999, 99999999}* 
-  * This fits the prediction that BubbleSort is on the order of n^2, as the sums grow quadratically.  
+  * This fits the prediction that InsertionSort is on the order of n^2, as the sums grow quadratically.  
 ## SelectionSort
 * Best case: N/A
   * Runtime complexity: *O(n^2)*  
@@ -76,4 +76,7 @@ This is on the order of n^2.
 * Worst case: N/A  
   * Runtime complexity: *O(n^2)*  
   As described below, the number of passes, swaps, and compares is the same regardless of the case (best, worst, or somewhere in between), so the runtime complexity is also the same for the best and worst cases. 
-* There is no best or worst case for selection sort. It makes a set number of passes, regardless of the initial arrangement of the elements (in our code, n passes are made, where there are n elements in the list). It makes a set number of swaps per pass: 1. In our code, if the maximum value is already in its place, it is effectively swapped with itself. It makes a set number of compares per pass as well, as the compares are used to find the maximum and the same process is used to find the maximum regardless of arrangement. It uses the same process, and thus the same memory and time, so this must still be counted as a swap. So, the same number of passes and swaps will be made regardless of the arrangement of the elements.
+  * There is no best or worst case for selection sort. It makes a set number of passes, regardless of the initial arrangement of the elements (in our code, n passes are made, where there are n elements in the list). It makes a set number of swaps per pass: 1. In our code, if the maximum value is already in its place, it is effectively swapped with itself. It makes a set number of compares per pass as well, as the compares are used to find the maximum and the same process is used to find the maximum regardless of arrangement. It uses the same process, and thus the same memory and time, so this must still be counted as a swap. So, the same number of passes and swaps will be made regardless of the arrangement of the elements.
+* We tested this using array sizes of 20, 100, 1000, 10000. Our results showed that to sort arrays of these sizes, the sum of passes, swaps, and compares were as follows:  
+*{250, 5250, 502500, 50025000}*
+* This supports our hypothesis that for SelectionSort, the amount of total opperations vs. time is on the order of n^2, as the sums grow quadratically. 
