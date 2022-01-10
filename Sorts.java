@@ -2,7 +2,7 @@
 Erica's Fans and Hugo (EFH) -- Hugo Jenkins, Ariella Katz, Kaitlin Ho, Boary, Tom, Apple
 APCS
 Lab04 -- Never Fear, Big O is Here!
-01-07-2021
+2022-01-07
 */
 
 import java.util.ArrayList;
@@ -47,10 +47,11 @@ public class Sorts {
             break;
           }
         }
-        int[] ret = new int[3];
+        int[] ret = new int[4];
         ret[0] = swapsBubble;
         ret[1] = passesBubble;
         ret[2] = comparesBubble;
+        ret[3] = ret[0] + ret[1] + ret[2];
         return ret;
       }
 
@@ -83,10 +84,11 @@ public class Sorts {
         }
       }
 
-      int[] ret = new int[3];
+      int[] ret = new int[4];
       ret[0] = swapsInsertion;
       ret[1] = passesInsertion;
       ret[2] = comparesInsertion;
+      ret[3] = ret[0] + ret[1] + ret[2];
       return ret;
     }
 
@@ -113,10 +115,11 @@ public class Sorts {
     //even if the swap is with itself, it requires the same
     // amount of time and memory so it must still be counted
     }
-    int[] ret = new int[3];
+    int[] ret = new int[4];
     ret[0] = swapsSelection;
     ret[1] = passesSelection;
     ret[2] = comparesSelection;
+    ret[3] = ret[0] + ret[1] + ret[2];
     return ret;
   }
 
