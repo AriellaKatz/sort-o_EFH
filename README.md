@@ -37,6 +37,7 @@ Song of the Week: Somebody That I Used To Know by Gotye
    * We tested this using array sizes of 20, 100, 1000, 10000. Our results showed that to sort arrays of these sizes, the sum of passes, swaps, and compares were as follows:  
    *{400, 10000, 1000000, 100000000}*  
    * This fits the prediction that BubbleSort is on the order of n^2, as the sums grow quadratically.  
+  ![bubbledescend](https://user-images.githubusercontent.com/90857207/148844976-518850f4-da81-4544-a468-f1a19033a344.jpg)  
   
 ## InsertionSort
 * Best case: Already sorted
@@ -48,7 +49,8 @@ Song of the Week: Somebody That I Used To Know by Gotye
   * We tested this using array sizes of 20, 100, 1000, 10000. Our results showed that to sort arrays of these sizes, the sum of passes, swaps, and compares were as follows:  
   *{38, 198, 1998, 19998}* 
   * This fits our hypothesis that while the array is in ascending order, there is a linear, 1-to-1 ratio between array size and total opperations. 
-   
+![insertionascend](https://user-images.githubusercontent.com/90857207/148845003-a3e13087-0ecf-44ff-bff0-65bc2d0fe3d3.jpg)
+
 * Worst case: Arranged entirely in descending order  
   * Runtime complexity: *O(n^2)*  
   Again, increasing the length by 1 increases the number of passes by 1. If the list is in descending order, the number of swaps per pass, if there are m elements within the partition, is equal to m-1. With every pass, m increases by 1, so the number of swaps increases by 1 as well. So, increasing n by 1 adds m swaps, where m was the number of elements in the largest partition; m = the previous n, so a list of length n+1 has the number of swaps of a list of length n, plus n. Thus, a list has the following number of swaps:  
@@ -63,6 +65,8 @@ Song of the Week: Somebody That I Used To Know by Gotye
   * We tested this using array sizes of 20, 100, 1000, 10000. Our results showed that to sort arrays of these sizes, the sum of passes, swaps, and compares were as follows:  
   *{399, 9999, 999999, 99999999}* 
   * This fits the prediction that InsertionSort is on the order of n^2, as the sums grow quadratically.  
+![insertiondescend](https://user-images.githubusercontent.com/90857207/148845025-35d90b3f-c486-466e-9a7d-8ba529b586a4.jpg)  
+
 ## SelectionSort
 * Best case: N/A
   * Runtime complexity: *O(n^2)*  
@@ -82,3 +86,4 @@ This is on the order of n^2.
 * We tested this using array sizes of 20, 100, 1000, 10000. Our results showed that to sort arrays of these sizes, the sum of passes, swaps, and compares were as follows:  
 *{250, 5250, 502500, 50025000}*
 * This supports our hypothesis that for SelectionSort, the amount of total opperations vs. time is on the order of n^2, as the sums grow quadratically. 
+![selection](https://user-images.githubusercontent.com/90857207/148845040-3afd6137-1799-48c2-a4b4-4ef78fbac50e.jpg)
