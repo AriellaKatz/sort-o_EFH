@@ -17,17 +17,17 @@ public class Sorts {
 		return "{" + out.substring(1) + "}";
 	}
 
-  public static void bubble(ArrayList<Comparable> data) {
-    int swapsBubble = 0;
-    int passesBubble = 0;
-    int comparesBubble = 0;
+  public static void optimizedBubble(ArrayList<Comparable> data) {
+    int swapsoptimizedBubble = 0;
+    int passesoptimizedBubble = 0;
+    int comparesoptimizedBubble = 0;
     for(int passes = 0; passes < data.size(); passes++) {
-      passesBubble++;
+      passesoptimizedBubble++;
           boolean sorted = true;
           for(int index = data.size()-1; index > passes; index--) {
-            comparesBubble++;
+            comparesoptimizedBubble++;
             if(data.get(index).compareTo(data.get(index-1)) <= 0) {
-              swapsBubble++;
+              swapsoptimizedBubble++;
               Comparable temp = data.get(index);
               data.set(index, data.get(index-1));
               data.set(index-1, temp);
@@ -39,9 +39,9 @@ public class Sorts {
           }
         }
         int[] ret = new int[4];
-        ret[0] = swapsBubble;
-        ret[1] = passesBubble;
-        ret[2] = comparesBubble;
+        ret[0] = swapsoptimizedBubble;
+        ret[1] = passesoptimizedBubble;
+        ret[2] = comparesoptimizedBubble;
         ret[3] = ret[0] + ret[1] + ret[2];
 
         System.out.println("Swaps: "+ ret[0]);

@@ -35,7 +35,7 @@ public class Driver{
 	public static ArrayList orderedPop(int size, int lo, int hi){
 		ArrayList<Integer> retAL = new ArrayList<Integer>();
 		retAL.populateOrdered(size, lo, hi);
-		Sorts.bubble(retAL);
+		Sorts.optimizedBubble(retAL);
 	}
 */
 
@@ -60,17 +60,17 @@ public static ArrayList orderedPop()
 
 /*
 HELP
-1) I tried to populateOrdered an ordered array before bubbleProof but I got cannot find symbol
+1) I tried to populateOrdered an ordered array before optimizedBubbleProof but I got cannot find symbol
 errors (see orderedPop)
 2) I also tried creating an ordered array completely outside of every method. I still
 got cannot find symbol method. (You can probably try this again, just populateOrdered with a for loop)
 I might've done it wrong
-3) I tried moving the print statement after the second bubble sort and the numbers came out different.
+3) I tried moving the print statement after the second optimizedBubble sort and the numbers came out different.
 I left it like this so you can compare it. Maybe im just blind
 */
 
-	public static void bubbleProof() {
-		System.out.println("Start of bubbleProof");
+	public static void optimizedBubbleProof() {
+		System.out.println("Start of optimizedBubbleProof");
 		int[] lengths = {20, 100, 1000, 10000};
 		// Best case
 		for (int length = 0; length < lengths.length; length ++) {
@@ -80,7 +80,7 @@ I left it like this so you can compare it. Maybe im just blind
 			ArrayList kats = populateOrdered(lengths[length]);
 
 			System.out.print("Sorting an ArrayList of size " + lengths[length] + " in ascending order: \n");
-			Sorts.bubble(kats);
+			Sorts.optimizedBubble(kats);
 
 		// Worst case
 
@@ -89,9 +89,9 @@ I left it like this so you can compare it. Maybe im just blind
 		}
 		//System.out.println(arrayToString(kats));
 		System.out.print("Sorting an ArrayList of size " + lengths[length] + " in descending order: \n");
-		Sorts.bubble(kats);
+		Sorts.optimizedBubble(kats);
 	}
-	System.out.println("End of bubbleProof");
+	System.out.println("End of optimizedBubbleProof");
 
 	}
 
@@ -140,7 +140,7 @@ I left it like this so you can compare it. Maybe im just blind
 	}
 
 	public static void main(String[] args) {
-		bubbleProof();
+		optimizedBubbleProof();
 		insertionProof();
 		selectionProof();
 	}
