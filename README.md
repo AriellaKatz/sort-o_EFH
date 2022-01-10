@@ -35,6 +35,7 @@ This is on the order of n^2.
 * 
 * We tested this using array sizes of 20, 100, 1000, 10000. Our results showed that to sort arrays of these sizes, the sum of passes, swaps, and compares were as follows:  
   *{400, 10000, 1000000, 100000000}*  
+* This fits the prediction that BubbleSort is on the order of n^2 as the sums grow quadratically.  
   
 ## InsertionSort
 * Best case: Already sorted
