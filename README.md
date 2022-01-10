@@ -7,10 +7,10 @@ Song of the Week: Somebody That I Used To Know by Gotye
   As described below, if the list is already sorted in ascending order, it makes one pass with 0 swaps (this is because our code for BubbleSort only continues onto additional passes if a swap has been made in the most recent pass), regardless of the length of the list. The number of compares will be n-1, since during this single pass, the rightmost element will be compared with each of the other elements, so increasing n by 1 increases the number of compares by 1. As the length increases, the runtime complexity is linear because the number of passes is constant (1), the number of swaps is constant (0), and the number of compares is linear (n-1), so the total number of procedures is linear:  
   *1 + 0 + (n-1)*  
   *n*  
- This is linear.
- * We tested this using array sizes of 20, 100, 1000, 10000. Our results showed that to sort arrays of these sizes, the sum of passes, swaps, and compares were as follows:  
+  This is linear.
+  * We tested this using array sizes of 20, 100, 1000, 10000. Our results showed that to sort arrays of these sizes, the sum of passes, swaps, and compares were as follows:  
   *{20, 100, 1000, 10000}*
- * This shows that while the array is in ascending order, there is a linear, 1-to-1 ratio between array size and total opperations. 
+  * This fits our hypothesis that while the array is in ascending order, there is a linear, 1-to-1 ratio between array size and total opperations. 
 * Worse case: Arranged entirely in descending order  
 
   * Runtime complexity: *O(n^2)*  
