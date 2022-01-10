@@ -2,7 +2,7 @@
 Erica's Fans and Hugo (EFH) -- Hugo Jenkins, Ariella Katz, Kaitlin Ho, Boary, Tom, Apple
 APCS
 Lab04 -- Never Fear, Big O is Here!
-01-07-2021
+2022-01-07
 */
 
 import java.util.ArrayList;
