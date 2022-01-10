@@ -12,20 +12,30 @@ Song of the Week: Somebody That I Used To Know by Gotye
   *{20, 100, 1000, 10000}*
 * This shows that while the array is in ascending order, there is a linear, 1-to-1 ratio between array size and total opperations. 
 * Worse case: Arranged entirely in descending order  
+
   * Runtime complexity: *O(n^2)*  
+ 
   Suppose you have an list, A, of length n. As described below, an array of length n+1, B, will have n+1 passes (n passes to walk all but the greatest element to the other side of the list, plus one more pass afterwards that requires no swaps/walking, telling the program the sort is over). All of the passes in A will require the same number of swaps as in B, except for the first pass in B, which requires one more swap (an n number of swaps), since it has another element. Thus, increasing the length of a list by 1 increases the number of passes by 1 and the number of swaps by n, the previous length of the list. A list has the following number of swaps:  
+  
   *(n-1) + (n-2) + (n-3) + (n-4) + ... + (n-n)*  
   *n * n - (1+2+3+4+...+n)*  
   *n * n - (n+1)n/2*  
   *n^2 - (n^2 + n)/2*  
   *n^2/2 - n/2*  
+  
 The number of compares is equal to the number of swaps, since every compare dictates a swap (this is what makes descending order the worst case). Then, we add the number of passes (n), the number of swaps (n^2/2 - n/2), and the number of compares (n^2/2 - n/2) for the total number of procedures in one sort:  
+
 *(n) + (n^2/2 - n/2) + (n^2/2 - n/2)*  
 *(n) + 2(n^2/2 - n/2)*  
 *n + n^2 - n*  
 *n^2*  
-This is on the order of n^2.
-* The number of passes depends on how quickly the array is sorted, as the program stops making passes if the previous pass employed no swaps. (This is what makes our implementation of BubbleSort optimized, rather than "vanilla".) If the list is already sorted, no swaps will be made during the first pass, and no further passes will be made. This is the minimal amount of swaps and passes (0 swaps and 1 pass), and requires a minimal amount of time and memory. If the list is entirely in descending order, with each pass, the minimum must be "walked" from one end to the other, similarly to with insertionSort. This is the maximum number of swaps per pass. The maximum number of passes will be made as well, since a pass must be made for each element in order to walk it to the other side. This requires the maximum amount of time and memory.
+This is on the order of n^2.  
+
+* The number of passes depends on how quickly the array is sorted, as the program stops making passes if the previous pass employed no swaps. (This is what makes our implementation of BubbleSort optimized, rather than "vanilla".) If the list is already sorted, no swaps will be made during the first pass, and no further passes will be made. This is the minimal amount of swaps and passes (0 swaps and 1 pass), and requires a minimal amount of time and memory. If the list is entirely in descending order, with each pass, the minimum must be "walked" from one end to the other, similarly to with insertionSort. This is the maximum number of swaps per pass. The maximum number of passes will be made as well, since a pass must be made for each element in order to walk it to the other side. This requires the maximum amount of time and memory.  
+* 
+* We tested this using array sizes of 20, 100, 1000, 10000. Our results showed that to sort arrays of these sizes, the sum of passes, swaps, and compares were as follows:  
+  *{400, 10000, 1000000, 100000000}*  
+  
 ## InsertionSort
 * Best case: Already sorted
   * Runtime complexity: *O(n)*  
