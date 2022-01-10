@@ -8,6 +8,9 @@ Song of the Week: Somebody That I Used To Know by Gotye
   *1 + 0 + (n-1)*  
   *n*  
  This is linear.
+* We tested this using array sizes of 20, 100, 1000, 10000. Our results showed that to sort arrays of these sizes, the sum of passes, swaps, and compares were as follows. 
+ *{20, 100, 1000, 10000}*
+* This shows that while the array is in ascending order, there is a linear, 1-to-1 ratio between array size and total opperations. 
 * Worse case: Arranged entirely in descending order  
   * Runtime complexity: *O(n^2)*  
   Suppose you have an list, A, of length n. As described below, an array of length n+1, B, will have n+1 passes (n passes to walk all but the greatest element to the other side of the list, plus one more pass afterwards that requires no swaps/walking, telling the program the sort is over). All of the passes in A will require the same number of swaps as in B, except for the first pass in B, which requires one more swap (an n number of swaps), since it has another element. Thus, increasing the length of a list by 1 increases the number of passes by 1 and the number of swaps by n, the previous length of the list. A list has the following number of swaps:  
