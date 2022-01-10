@@ -33,7 +33,7 @@ Song of the Week: Somebody That I Used To Know by Gotye
    * The number of passes depends on how quickly the array is sorted, as the program stops making passes if the previous pass employed no swaps. (This is what makes our implementation of BubbleSort optimized, rather than "vanilla".) If the list is already sorted, no swaps will be made during the first pass, and no further passes will be made. This is the minimal amount of swaps and passes (0 swaps and 1 pass), and requires a minimal amount of time and memory. If the list is entirely in descending order, with each pass, the minimum must be "walked" from one end to the other, similarly to with insertionSort. This is the maximum number of swaps per pass. The maximum number of passes will be made as well, since a pass must be made for each element in order to walk it to the other side. This requires the maximum amount of time and memory.  
    * We tested this using array sizes of 20, 100, 1000, 10000. Our results showed that to sort arrays of these sizes, the sum of passes, swaps, and compares were as follows:  
    *{400, 10000, 1000000, 100000000}*  
-   * This fits the prediction that BubbleSort is on the order of n^2 as the sums grow quadratically.  
+   * This fits the prediction that BubbleSort is on the order of n^2, as the sums grow quadratically.  
   
 ## InsertionSort
 * Best case: Already sorted
@@ -41,7 +41,11 @@ Song of the Week: Somebody That I Used To Know by Gotye
   As described below, given a list of length n, n-1 passes are made regardless of the arrangement of elements, so increasing n by 1 increases the number of passes by 1, linearly. Since it is already in ascending order, however, still no swaps will be made during the added pass, and the total number of swaps remains constant (0). The number of compares is equal to the number of passes, n-1. Adding the number of passes, swaps, and compares gives:  
   *(n-1) + 0 + (n-1)*  
   *2n-2*  
- This is linear. 
+ This is linear.  
+  * We tested this using array sizes of 20, 100, 1000, 10000. Our results showed that to sort arrays of these sizes, the sum of passes, swaps, and compares were as follows:  
+  *{38, 198, 1998, 19998}* 
+  * This fits our hypothesis that while the array is in ascending order, there is a linear, 1-to-1 ratio between array size and total opperations. 
+   
 * Worst case: Arranged entirely in descending order  
   * Runtime complexity: *O(n^2)*  
   Again, increasing the length by 1 increases the number of passes by 1. If the list is in descending order, the number of swaps per pass, if there are m elements within the partition, is equal to m-1. With every pass, m increases by 1, so the number of swaps increases by 1 as well. So, increasing n by 1 adds m swaps, where m was the number of elements in the largest partition; m = the previous n, so a list of length n+1 has the number of swaps of a list of length n, plus n. Thus, a list has the following number of swaps:  
@@ -53,6 +57,9 @@ The number of compares is equal to the number of swaps, because every compare di
 *n^2 - 1*  
 This is on the order of n^2.
 * Regardless of the initial arrangement of elements, the same number of passes will be made, since the partition must be set the same amount of times, each time adding an element to the sorted region, and it is the moving of a partition (and the following "walk") that constitutes a pass. However, if it is already in ascending order, no swaps will be made during the pass, and a minimal amount of time and memory will be used. If it is entirely in descending order, the minimum element must be swapped with all of the other elements in order to walk it to its place; this is the maximum number of swaps per pass, and requires the maximum amount of time and memory.
+  * We tested this using array sizes of 20, 100, 1000, 10000. Our results showed that to sort arrays of these sizes, the sum of passes, swaps, and compares were as follows: 
+  *{399, 9999, 999999, 99999999}* 
+  * This fits the prediction that BubbleSort is on the order of n^2, as the sums grow quadratically.  
 ## SelectionSort
 * Best case: N/A
   * Runtime complexity: *O(n^2)*  
