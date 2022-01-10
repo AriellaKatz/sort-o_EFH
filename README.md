@@ -11,6 +11,8 @@ Song of the Week: Somebody That I Used To Know by Gotye
   * We tested this using array sizes of 20, 100, 1000, 10000. Our results showed that to sort arrays of these sizes, the sum of passes, swaps, and compares were as follows:  
   *{20, 100, 1000, 10000}*
   * This fits our hypothesis that while the array is in ascending order, there is a linear, 1-to-1 ratio between array size and total opperations. 
+![Handwritten_2022-01-10_164610](https://user-images.githubusercontent.com/90857207/148844920-efaa5ef6-7513-4c45-aaff-b8719356e2da.jpg)
+
 * Worse case: Arranged entirely in descending order  
 
   * Runtime complexity: *O(n^2)*  
