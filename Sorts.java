@@ -43,7 +43,11 @@ public class Sorts {
         ret[1] = passesBubble;
         ret[2] = comparesBubble;
         ret[3] = ret[0] + ret[1] + ret[2];
-        System.out.println(arrayToString(ret));
+
+        System.out.println("Swaps: "+ ret[0]);
+        System.out.println("Passes: "+ ret[1]);
+        System.out.println("Compares: "+ ret[2]);
+        System.out.println("Swaps+Passes+Compares: "+ ret[3]);
 
       }
 
@@ -81,7 +85,11 @@ public class Sorts {
       ret[1] = passesInsertion;
       ret[2] = comparesInsertion;
       ret[3] = ret[0] + ret[1] + ret[2];
-      System.out.println(arrayToString(ret));
+
+      System.out.println("Swaps: "+ ret[0]);
+      System.out.println("Passes: "+ ret[1]);
+      System.out.println("Compares: "+ ret[2]);
+      System.out.println("Swaps+Passes+Compares: "+ ret[3]);
 
     }
 
@@ -108,12 +116,18 @@ public class Sorts {
     //even if the swap is with itself, it requires the same
     // amount of time and memory so it must still be counted
     }
+
+
     int[] ret = new int[4];
     ret[0] = swapsSelection;
     ret[1] = passesSelection;
     ret[2] = comparesSelection;
     ret[3] = ret[0] + ret[1] + ret[2];
-    System.out.println(arrayToString(ret));
+
+    System.out.println("Swaps: "+ ret[0]);
+    System.out.println("Passes: "+ ret[1]);
+    System.out.println("Compares: "+ ret[2]);
+    System.out.println("Swaps+Passes+Compares: "+ ret[3]);
   }
 
 }
