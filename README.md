@@ -23,7 +23,7 @@ Song of the Week: Somebody That I Used To Know by Gotye
   *n^2 - (n^2 + n)/2*  
   *n^2/2 - n/2*  
   
-The number of compares is equal to the number of swaps, since every compare dictates a swap (this is what makes descending order the worst case). Then, we add the number of passes (n), the number of swaps (n^2/2 - n/2), and the number of compares (n^2/2 - n/2) for the total number of procedures in one sort:  
+  The number of compares is equal to the number of swaps, since every compare dictates a swap (this is what makes descending order the worst case). Then, we add the number of passes (n), the number of swaps (n^2/2 - n/2), and the number of compares (n^2/2 - n/2) for the total number of procedures in one sort:  
 
  *(n) + (n^2/2 - n/2) + (n^2/2 - n/2)*  
  *(n) + 2(n^2/2 - n/2)*  
