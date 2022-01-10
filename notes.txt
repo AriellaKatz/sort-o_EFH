@@ -16,7 +16,7 @@ a0: It is fully sorted.
 q1: After pass p, what do you know?
 a2: The elements at indeces 0 to p are sorted (if the number of passes begins at 0).
 q2: How many passes are necessary to completely sort?
-a2: no more than length-1
+a2: no more than n (n=length)
 
 SEL-QA:
 q0: How many passes to sort n elements?
