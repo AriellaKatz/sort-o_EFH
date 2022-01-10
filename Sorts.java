@@ -51,7 +51,7 @@ public class Sorts {
         ret[0] = swapsBubble;
         ret[1] = passesBubble;
         ret[2] = comparesBubble;
-        ret[3] = swapsBubble + passesBubble;
+        ret[3] = ret[0] + ret[1] + ret[2];
         return ret;
       }
 
@@ -88,7 +88,7 @@ public class Sorts {
       ret[0] = swapsInsertion;
       ret[1] = passesInsertion;
       ret[2] = comparesInsertion;
-      ret[3] = swapsInsertion + passesInsertion;
+      ret[3] = ret[0] + ret[1] + ret[2];
       return ret;
     }
 
@@ -119,7 +119,7 @@ public class Sorts {
     ret[0] = swapsSelection;
     ret[1] = passesSelection;
     ret[2] = comparesSelection;
-    ret[3] = swapsSelection + passesSelection;
+    ret[3] = ret[0] + ret[1] + ret[2];
     return ret;
   }
 
