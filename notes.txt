@@ -1,7 +1,7 @@
 Erica's Fans and Hugo (EFH) -- Hugo Jenkins, Ariella Katz, Kaitlin Ho, Boary, Tom, Apple
 APCS
 Lab04 -- Never Fear, Big O is Here!
-2021-01-07
+2022-01-07
 
 DISCO:
 - If BubbleSort is coded so it finishes sorting after a full pass without swaps, the  least amount of passes needed is one and the max is n-1. If BubbleSorted is coded without this function, the least and greatest amount of passes needed would be equal (n-1).
