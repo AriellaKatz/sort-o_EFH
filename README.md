@@ -32,10 +32,9 @@ The number of compares is equal to the number of swaps, since every compare dict
 This is on the order of n^2.  
 
 * The number of passes depends on how quickly the array is sorted, as the program stops making passes if the previous pass employed no swaps. (This is what makes our implementation of BubbleSort optimized, rather than "vanilla".) If the list is already sorted, no swaps will be made during the first pass, and no further passes will be made. This is the minimal amount of swaps and passes (0 swaps and 1 pass), and requires a minimal amount of time and memory. If the list is entirely in descending order, with each pass, the minimum must be "walked" from one end to the other, similarly to with insertionSort. This is the maximum number of swaps per pass. The maximum number of passes will be made as well, since a pass must be made for each element in order to walk it to the other side. This requires the maximum amount of time and memory.  
-* 
-* We tested this using array sizes of 20, 100, 1000, 10000. Our results showed that to sort arrays of these sizes, the sum of passes, swaps, and compares were as follows:  
+  * We tested this using array sizes of 20, 100, 1000, 10000. Our results showed that to sort arrays of these sizes, the sum of passes, swaps, and compares were as follows:  
   *{400, 10000, 1000000, 100000000}*  
-* This fits the prediction that BubbleSort is on the order of n^2 as the sums grow quadratically.  
+  * This fits the prediction that BubbleSort is on the order of n^2 as the sums grow quadratically.  
   
 ## InsertionSort
 * Best case: Already sorted
