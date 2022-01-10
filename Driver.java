@@ -1,5 +1,5 @@
 /*
-Erica's Fans and Hugo (EFH) -- Hugo Jenkins, Ariella Katz, Kaitlin Ho, Boary, Tom, Apple
+Erica's Fans and kats (EFH) -- kats Jenkins, Ariella Katz, Kaitlin Ho, Boary, Tom, Apple
 APCS
 Lab04 -- Never Fear, Big O is Here!
 2022-01-07
@@ -33,41 +33,26 @@ public class Driver{
 	}
 	return "{" + out.substring(1) + "}";
 }
-/*
-	public static void best_worstProof() {
-		ArrayList bubbleBest = new ArrayList(5);
-		ArrayList bubbleWorst = new ArrayList(5);
-		ArrayList insertionBest = new ArrayList(5);
-		ArrayList insertionWorst = new ArrayList(5);
-		ArrayList selectionBest = new ArrayList(5);
-		ArrayList selectionWorst = new ArrayList(5);
-		ArrayList hugo = new ArrayList(5);
-		hugo.add(1);
-		hugo.add(3);
 
-		hugo.add
-
-	}
-	*/
 
 	public static void bubbleProof() {
 		System.out.println("Start of bubbleProof");
 		int[] lengths = {20, 100, 1000, 10000};
 		// Best case
 		for (int length = 0; length < lengths.length; length ++) {
-			ArrayList hugo = populate(lengths[length],0,1000);
-			Sorts.bubble(hugo);
+			ArrayList kats = populate(lengths[length],0,1000);
+			Sorts.bubble(kats);
 			System.out.print("Sorting an ArrayList of size " + lengths[length] + " in ascending order: ");
-			System.out.println(arrayToString(Sorts.bubble(hugo)));
+			Sorts.bubble(kats);
 
 		// Worst case
 
-		for (int i = 0; i < hugo.size(); i++) {
-			hugo.set(i, (int)hugo.get(i)*-1);
+		for (int i = 0; i < kats.size(); i++) {
+			kats.set(i, (int)kats.get(i)*-1);
 		}
-		//System.out.println(arrayToString(hugo));
+		//System.out.println(arrayToString(kats));
 		System.out.print("Sorting an ArrayList of size " + lengths[length] + " in descending order: ");
-		System.out.println(arrayToString(Sorts.bubble(hugo)));
+		Sorts.bubble(kats);
 	}
 	System.out.println("End of bubbleProof");
 
@@ -78,19 +63,19 @@ public class Driver{
 		int[] lengths = {20, 100, 1000, 10000};
 		// Best case
 		for (int length = 0; length < lengths.length; length ++) {
-			ArrayList hugo = populate(lengths[length],0,1000);
-			Sorts.insertion(hugo);
+			ArrayList kats = populate(lengths[length],0,1000);
+			Sorts.insertion(kats);
 			System.out.print("Sorting an ArrayList of size " + lengths[length] + " in ascending order: ");
-			System.out.println(arrayToString(Sorts.insertion(hugo)));
+			Sorts.insertion(kats);
 
 		// Worst case
 
-		for (int i = 0; i < hugo.size(); i++) {
-			hugo.set(i, (int)hugo.get(i)*-1);
+		for (int i = 0; i < kats.size(); i++) {
+			kats.set(i, (int)kats.get(i)*-1);
 		}
-		//System.out.println(arrayToString(hugo));
+		//System.out.println(arrayToString(kats));
 		System.out.print("Sorting an ArrayList of size " + lengths[length] + " in descending order: ");
-		System.out.println(arrayToString(Sorts.insertion(hugo)));
+		Sorts.insertion(kats);
 	}
 	System.out.println("End of insertionProof");
 
@@ -101,19 +86,19 @@ public class Driver{
 		int[] lengths = {20, 100, 1000, 10000};
 		// Best case
 		for (int length = 0; length < lengths.length; length ++) {
-			ArrayList hugo = populate(lengths[length],0,1000);
-			Sorts.selection(hugo);
+			ArrayList kats = populate(lengths[length],0,1000);
+			Sorts.selection(kats);
 			System.out.print("Sorting an ArrayList of size " + lengths[length] + " in ascending order: ");
-			System.out.println(arrayToString(Sorts.selection(hugo)));
+			Sorts.selection(kats);
 
 		// Worst case
 
-		for (int i = 0; i < hugo.size(); i++) {
-			hugo.set(i, (int)hugo.get(i)*-1);
+		for (int i = 0; i < kats.size(); i++) {
+			kats.set(i, (int)kats.get(i)*-1);
 		}
-		//System.out.println(arrayToString(hugo));
+		//System.out.println(arrayToString(kats));
 		System.out.print("Sorting an ArrayList of size " + lengths[length] + " in descending order: ");
-		System.out.println(arrayToString(Sorts.selection(hugo)));
+		Sorts.selection(kats);
 	}
 	System.out.println("End of selectionProof");
 

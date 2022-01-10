@@ -8,25 +8,16 @@ Lab04 -- Never Fear, Big O is Here!
 import java.util.ArrayList;
 
 public class Sorts {
-/*
-  public int swapsBubble = 0;
-  public int passesBubble = 0;
-  public int swapsSelection = 0;
-  public int passesSelection = 0;
-  public int swapsInsertion = 0;
-  public int passesInsertion = 0;
 
-  public void reset() {
-    swapsBubble = 0;
-    passesBubble = 0;
-    swapsSelection = 0;
-    passesSelection = 0;
-    swapsInsertion = 0;
-    passesInsertion = 0;
-  }
-*/
+  public static String arrayToString(int[] a) {
+		String out = "";
+		for (int e : a) {
+			out += ","+e;
+		}
+		return "{" + out.substring(1) + "}";
+	}
 
-  public static int[] bubble(ArrayList<Comparable> data) {
+  public static void bubble(ArrayList<Comparable> data) {
     int swapsBubble = 0;
     int passesBubble = 0;
     int comparesBubble = 0;
@@ -52,11 +43,12 @@ public class Sorts {
         ret[1] = passesBubble;
         ret[2] = comparesBubble;
         ret[3] = ret[0] + ret[1] + ret[2];
-        return ret;
+        System.out.println(arrayToString(ret));
+
       }
 
 
-  public static int[] insertion(ArrayList<Comparable> data) {
+  public static void insertion(ArrayList<Comparable> data) {
     int swapsInsertion = 0;
     int passesInsertion = 0;
     int comparesInsertion = 0;
@@ -89,11 +81,12 @@ public class Sorts {
       ret[1] = passesInsertion;
       ret[2] = comparesInsertion;
       ret[3] = ret[0] + ret[1] + ret[2];
-      return ret;
+      System.out.println(arrayToString(ret));
+
     }
 
 
-  public static int[] selection(ArrayList<Comparable> data) {
+  public static void selection(ArrayList<Comparable> data) {
     int swapsSelection = 0;
     int passesSelection = 0;
     int comparesSelection = 0;
@@ -120,7 +113,7 @@ public class Sorts {
     ret[1] = passesSelection;
     ret[2] = comparesSelection;
     ret[3] = ret[0] + ret[1] + ret[2];
-    return ret;
+    System.out.println(arrayToString(ret));
   }
 
 }
