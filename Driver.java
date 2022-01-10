@@ -52,7 +52,7 @@ public class Driver{
 
 	public static void bubbleProof() {
 		System.out.println("Start of bubbleProof");
-		int[] lengths = {5, 10, 15};
+		int[] lengths = {20, 100, 1000, 10000};
 		// Best case
 		for (int length = 0; length < lengths.length; length ++) {
 			ArrayList hugo = populate(lengths[length],0,1000);
@@ -75,7 +75,7 @@ public class Driver{
 
 	public static void insertionProof() {
 		System.out.println("Start of insertionProof");
-		int[] lengths = {5, 10, 15};
+		int[] lengths = {20, 100, 1000, 10000};
 		// Best case
 		for (int length = 0; length < lengths.length; length ++) {
 			ArrayList hugo = populate(lengths[length],0,1000);
@@ -98,7 +98,7 @@ public class Driver{
 
 	public static void selectionProof() {
 		System.out.println("Start of selectionProof");
-		int[] lengths = {5, 10, 15};
+		int[] lengths = {20, 100, 1000, 10000};
 		// Best case
 		for (int length = 0; length < lengths.length; length ++) {
 			ArrayList hugo = populate(lengths[length],0,1000);
